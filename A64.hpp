@@ -12,24 +12,20 @@
 #include <iomanip>
 using namespace std;
 
-//----------
-// Make a line for Function Prototype for getListprime Here
-//----------
+void getListprime(int begin = 2, int end = 100);
 
-int main()
-{
-	int begin, end;
-	cout << "Enter your input (two integer for range ) \n";
-	cin >> begin >> end;
-	if (begin < end)
-		getListprime(begin, end);
-	else if (begin > end)
-		getListprime();
-	else
-		getListprime(begin);
-}
 void getListprime(int begin, int end)
 {
-
-	// Complete this function
+	int i, j;
+	if (begin <= 1 || end <= 1)
+		return;
+	for (i = begin; i < end; i++)
+	{
+		for (j = 2; j <= (i / j); j++)
+			if (i % j == 0)
+				break;
+		if (j > (i / j))
+			cout << i << " \t";
+	}
+	cout << endl;
 }
