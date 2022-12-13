@@ -12,20 +12,6 @@
 #include <iomanip>
 using namespace std;
 
-void getListprime(int begin = 2, int end = 100);
-
 void getListprime(int begin, int end)
 {
-	int i, j;
-	if (begin <= 1 || end <= 1)
-		return;
-	for (i = begin; i < end; i++)
-	{
-		for (j = 2; j <= (i / j); j++)
-			if (i % j == 0)
-				break;
-		if (j > (i / j))
-			cout << i << " \t";
-	}
-	cout << endl;
 }
