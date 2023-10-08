@@ -1,24 +1,20 @@
-//		Make a program that find the prime numbers according to two user inputs [begin, end]
-//		begin and end must be positive integers.
-//			if begin == end, getListprime(int) function is called with default arguments [begin, 100]
-//			if begin > end,  getListprime(  ) function is called with default arguments [0, 100]
-//			if begin < end, getListprime(int, int) fuction is called with the range from begin to end.
-//		example)
-//			user input = 20, 20 , call getListprime( 20 ) // the second parameter is default.[20,100]
-//			user input = 40, 20 , call getListprime(   ) // the both parameters are default. [0,100]
-//			user input = 20, 50,  call getListprime(20, 50) // call the function with actual arguments
-
-#include "A64.hpp"
+#include "main.hpp"
 
 int main()
 {
-	int begin, end;
-	cout << "Enter your input (two integer for range ) \n";
-	cin >> begin >> end;
-	if (begin < end)
-		getListprime(begin, end);
-	else if (begin > end)
-		getListprime();
-	else
-		getListprime(begin);
+	int n1, n2, n3, n4;
+
+	n1 = 10;
+	n2 = 20;
+	n3 = 30;
+	n4 = 40;
+
+	cout << "Original Values are " << n1 << "\t" << n2 << "\t" << n3 << "\t" << n4 << endl;
+
+	swapValues(n1, n2);
+	cout << "After changing two value n1 and n2 " << n1 << "\t" << n2 << endl;
+	swapValues(n1, n2, n3);
+	cout << "After changing three value n1, n2 and n3 " << n1 << "\t" << n2 << "\t" << n3 << endl;
+	swapValues(n1, n2, n3, n4);
+	cout << "After changing four value n1, n2, n3 and n4 " << n1 << "\t" << n2 << "\t" << n3 << "\t" << n4 << endl;
 }
